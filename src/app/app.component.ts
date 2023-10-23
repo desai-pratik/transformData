@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dataTransform';
+  // home mathi aavyo
+  parentNumberArray: number[] = []; 
+  receiveNumberArrayFromChild(numberArray: number[]) {
+    this.parentNumberArray = numberArray;
+  }
+
+  // home2 mathi aama aavyo
+  parentOddNumbers: number[] = [];
+  parentEvenNumbers: number[] = [];
+  receiveOddNumbersFromChild(oddNumbers: number[]) {
+    this.parentOddNumbers = oddNumbers;
+  }
+  receiveEvenNumbersFromChild(evenNumbers: number[]) {
+    this.parentEvenNumbers = evenNumbers;
+  }
+
+  
+   
 }
