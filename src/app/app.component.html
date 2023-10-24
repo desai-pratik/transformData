@@ -1,8 +1,7 @@
-<app-home (numberArrayEmitter)="receiveNumberArrayFromChild($event) "></app-home>
- 
- 
+<app-home [oddNumbers]="parentOddNumbers" [evenNumbers]="parentEvenNumbers" (numberArrayEmitter)="receiveNumberArrayFromChild($event)" ></app-home>
+  
 
-<p>Received Array in Parent Component: {{ parentNumberArray }}</p>
+<!-- <p>Received Array in Parent Component: {{ parentNumberArray }}</p> -->
   
 <app-home2
   [dataFromParent]="parentNumberArray"
@@ -16,5 +15,5 @@
 
 
 
-<p>Received Odd Numbers in Parent Component: {{ parentOddNumbers.join(', ') }}</p>
-<p>Received Even Numbers in Parent Component: {{ parentEvenNumbers.join(', ') }}</p>
+<!-- <p>Received Odd : {{ parentOddNumbers }}</p>
+<p>Received Even : {{ parentEvenNumbers }}</p> -->

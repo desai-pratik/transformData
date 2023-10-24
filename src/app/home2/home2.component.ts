@@ -13,16 +13,14 @@ export class Home2Component {
   @Output() oddNumbersEmitter = new EventEmitter<number[]>();
   @Output() evenNumbersEmitter = new EventEmitter<number[]>();
 
-  // navi value store kari
+  // navi value store kari app ne value
   oddNumbers: number[] = [];
-  evenNumbers: number[] = []; 
-
+  evenNumbers: number[] = [];
 
   ngOnChanges() {
     this.findOddEvenNumbers();
   }
-
-
+  
     // value convert kari odd evan ma
   private findOddEvenNumbers() {
     this.oddNumbers = this.dataFromParent.filter(number => number % 2 !== 0);
