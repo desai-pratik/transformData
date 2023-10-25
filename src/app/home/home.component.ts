@@ -18,8 +18,17 @@ export class HomeComponent implements OnInit {
 
 
   // main app mathi aavyo
-  @Input() dataFromParent: number[] = [];
-  @Input() dataFromParent: number[] = [];
+  @Input() dataFrommain: number[] = []; 
 
   
+
+  parentOddinmain: number[] = [];
+  parentEveninmain: number[] = [];
+
+  receiveOddNumbersFromChild(oddNumbers: number[]) {
+    this.parentOddNumbers = oddNumbers;
+  }
+  receiveEvenNumbersFromChild(evenNumbers: number[]) {
+    this.parentEvenNumbers = evenNumbers;
+  }
 }
