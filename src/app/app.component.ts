@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'dataTransform';
   // home mathi aavyo
-  parentNumberArray: number[] = []; 
+  parentNumberArray: number[] = [];
   receiveNumberArrayFromChild(numberArray: number[]) {
     this.parentNumberArray = numberArray;
   }

@@ -7,28 +7,20 @@ import { Component , EventEmitter, OnInit, Output , Input } from '@angular/core'
 })
 
 export class HomeComponent implements OnInit {
-  numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ 
+  numberArray  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
   // app (main) ma moklya
   @Output() numberArrayEmitter = new EventEmitter<number[]>(); 
   ngOnInit(){
-    this.numberArrayEmitter.emit(this.numberArray);
+    this.numberArrayEmitter.emit(this.numberArray); 
   } 
 
 
   // main app mathi aavyo
-  @Input() dataFrommain: number[] = []; 
+  @Input() dataFromParent: number[] = [];
+  @Input() dataFromParent: number[] = [];
 
   
-
-  parentOddinmain: number[] = [];
-  parentEveninmain: number[] = [];
-
-  receiveOddNumbersFromChild(oddNumbers: number[]) {
-    this.parentOddNumbers = oddNumbers;
-  }
-  receiveEvenNumbersFromChild(evenNumbers: number[]) {
-    this.parentEvenNumbers = evenNumbers;
-  }
 }
